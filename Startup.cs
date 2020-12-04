@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -75,6 +76,28 @@ namespace TodoList
                 var archivoXmlComentarios = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var rutaApiComentarios = Path.Combine(AppContext.BaseDirectory, archivoXmlComentarios);
                 options.IncludeXmlComments(rutaApiComentarios);
+                    //primero definimos el esquema de seguridad
+                options.AddSecurityDefinition("Bearer",
+                    new OpenApiSecurityScheme
+                    {
+                        Description = "Autenticacion JWT (Bearer)",
+                        Type = SecuritySchemeType.Http,
+                        Scheme = "bearer"
+                    });
+                options.AddSecurityRequirement(new OpenApiSecurityRequirement{
+                    {
+
+                    new OpenApiSecurityScheme
+                    {
+                        Reference= new OpenApiReference
+                        {
+                            Id = "Bearer",
+                            Type = ReferenceType.SecurityScheme
+                        }
+                    }, new List<string>()
+                }
+
+            });
             });
             services.AddControllers();
 
