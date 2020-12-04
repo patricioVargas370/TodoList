@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TodoList</name>
+    </assembly>
+    <members>
+        <member name="M:TodoList.Controllers.TareasController.GetTareas">
+            <summary>
+            OBTENER TODAS LAS TAREAS
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TodoList.Controllers.TareasController.GetTarea(System.Int32)">
+            <summary>
+            OBTENER UNA TAREA INDIVIDUAL
+            </summary>
+            <param name="TareasId">ESTE ES EL ID DE LA TAREA</param>
+            <returns></returns>
+        </member>
+        <member name="M:TodoList.Controllers.TareasController.CrearTarea(TodoList.Models.DTO.TareasDTO)">
+            <summary>
+            CREAR UNA NUEVA TAREA
+            </summary>
+            <param name="tareasDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TodoList.Controllers.TareasController.ActualizarTarea(System.Int32,TodoList.Models.DTO.TareasDTO)">
+            <summary>
+            ACTUALIZAR UNA TAREA EXISTENTE
+            </summary>
+            <param name="tareasID"></param>
+            <param name="tareasDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TodoList.Controllers.TareasController.BorrarTarea(System.Int32)">
+            <summary>
+            BORRAMOS UNA TAREA EXISTENTE
+            </summary>
+            <param name="tareasID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TodoList.Controllers.UsuarioController.GetUsuarios">
+            <summary>
+            MOSTRAMOS TODOS LOS USUARIOS EXISTENTES
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TodoList.Controllers.UsuarioController.GetUsuario(System.Int32)">
+            <summary>
+            MOSTRAMOS UN USUARIO INDIVIDUAL
+            </summary>
+            <param name="UsuarioId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TodoList.Controllers.UsuarioController.Registro(TodoList.Models.DTO.UsuarioAuthDTO)">
+            <summary>
+            REGISTRAMOS A UN NUEVO USUARIO
+            </summary>
+            <param name="usuarioAuthDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TodoList.Controllers.UsuarioController.Login(TodoList.Models.DTO.UsuarioAuthLoginDTO)">
+            <summary>
+            AUTENTICAMOS A UN USUARIO EXISTENTE PARA HACER LOGIN FUNCIONANDO CON HASH Y SALT CON JWT 
+            </summary>
+            <param name="usuarioAuthLoginDto"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
